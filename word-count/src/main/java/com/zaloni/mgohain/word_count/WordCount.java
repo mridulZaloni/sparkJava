@@ -16,6 +16,10 @@ import java.util.Arrays;
  */
 public class WordCount {
     public static void main (String [] args) {
+        if (args.length !=2 ) {
+            System.out.println("In correct number of inputs." + args.length + "\nProvide correct number of inputs.");
+            System.exit(1);
+        }
         String input = args[0];
         String output = args[1];
         SparkConf conf = new SparkConf().setAppName("Word Count");
